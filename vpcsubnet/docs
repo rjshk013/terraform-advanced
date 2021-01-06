@@ -1,0 +1,11 @@
+This vpc.tf fiel create custom vpc as per the cidr block 
+It will create public & private subnets dynamically as per the region & azs available 
+For example if the region is us-east-1 ,it will detect it has 6 azs as 1a,1b,1c,1d,1e,1f and will create 6 public & 6 private subnets per az & naming convention will be publicsubnet-1 to 6
+
+the advantage is that you dont need ton give variables like az,subnetcidr
+
+This will also create ec2 instances as per the count given in ec2instance.tf
+
+if it is 1 ,will create 1 instance 
+
+if it is 3 it will create 3 instances in different availability zones

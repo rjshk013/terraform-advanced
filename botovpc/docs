@@ -1,0 +1,4 @@
+This will create vpc,public subnets automatically depends on az given in variables.tf ,create security groups and launch instances with classic loadbalancer
+
+it will create public subnets with the values given in the variables file.Since the count is given it will create instances with the subnet nos.
+reference link  :https://www.bogotobogo.com/DevOps/Terraform/Terraform-VPC-Subnet-ELB-RouteTable-SecurityGroup-Apache-Server-2.php
