@@ -4,10 +4,9 @@ it will create public subnets with the values given in the variables file.Since 
 reference link  :https://www.bogotobogo.com/DevOps/Terraform/Terraform-VPC-Subnet-ELB-RouteTable-SecurityGroup-Apache-Server-2.php
 
 
-need to have aws.tf & terraform.tfvars files with aws credentials
+
 
 terraform init
 
-terraform plan -var-file terraform.tfvars
-
-terraform apply -var-file terraform.tfvars
+terraform plan -out myvpc.out (can be any name)
+terraform apply myvpc.out
