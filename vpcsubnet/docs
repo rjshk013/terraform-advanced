@@ -9,3 +9,17 @@ This will also create ec2 instances as per the count given in ec2instance.tf
 if it is 1 ,will create 1 instance 
 
 if it is 3 it will create 3 instances in different availability zones
+
+
+neet to have aws.tf file with contents 
+
+provider "aws" {
+    access_key = "${var.aws_access_key}"
+    secret_key = "${var.aws_secret_key}"
+    region = "${var.aws_region}"
+}
+
+terraform.tfvars
+
+with  aws_access_key = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
+aws_secret_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
