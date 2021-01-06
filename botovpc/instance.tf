@@ -5,7 +5,8 @@ resource "aws_instance" "webservers" {
 	security_groups = ["${aws_security_group.webservers.id}"]
 	subnet_id = "${element(aws_subnet.public.*.id,count.index)}"
         key_name               = "${var.key_name}"
-
+        user_data = "${file("install_httpd.sh")}"
+	
 	tags = {
 	  Name = "Server-${count.index}"
 	}
