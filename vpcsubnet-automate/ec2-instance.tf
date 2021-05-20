@@ -1,4 +1,4 @@
-
+########launch ec2 instance in pubic subnet###############
 resource "aws_instance" "terraform_wapp" {
     ami = "${var.instance_ami}"
     instance_type = "${var.instance_type}"
@@ -13,6 +13,8 @@ resource "aws_instance" "terraform_wapp" {
 
     }
 }
+
+###############launch ec2 instance in private subnet#################
 resource "aws_instance" "terraform_web" {
     ami = "${var.instance_ami}"
     instance_type = "${var.instance_type}"
