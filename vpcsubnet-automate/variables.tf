@@ -1,12 +1,10 @@
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
 
 variable "aws_region" {
     description = "EC2 Region for the VPC"
     default = "us-east-1"
 }
 
-variable "subnets_cidr" {
+variable "publicsubnets_cidr" {
 	type = "list"
 	default = ["10.20.1.0/24", "10.20.2.0/24","10.20.3.0/24" ]
 }
